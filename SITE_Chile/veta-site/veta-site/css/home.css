@@ -1,0 +1,49 @@
+/* ==========================================================
+   HOME — landing page
+   ========================================================== */
+.hero { text-align: center; padding-block: 3.5rem 2rem; }
+.hero__titulo {
+  font-size: var(--fs-2xl); letter-spacing: 0.04em; text-transform: uppercase;
+  font-weight: 600; margin-bottom: 1.25rem;
+}
+.hero__intro { margin-inline: auto; max-width: 54ch; font-size: var(--fs-sm); }
+.hero .slogan { margin: 2rem 0 1.5rem; }
+.hero__imagem {
+  border-radius: var(--raio-lg); overflow: hidden;
+  max-width: 820px; margin-inline: auto;
+}
+.hero__imagem img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.hero__texto { margin: 2rem auto 1.5rem; max-width: 46ch; }
+.hero__texto p { color: var(--site-cacau); }
+
+.secao { padding-block: 3rem; }
+.secao__titulo {
+  text-align: center; font-size: var(--fs-md); letter-spacing: 0.14em;
+  text-transform: uppercase; margin-bottom: 2.25rem;
+}
+.secao__titulo::after {
+  content: ""; display: block; width: 48px; height: 2px;
+  background: var(--site-ferrugem); margin: 0.9rem auto 0;
+}
+
+/* Sobre nós */
+.sobre { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
+.sobre__item img { width: 100%; object-fit: cover; border-radius: var(--raio-sm); }
+.sobre__item:first-child img { aspect-ratio: 3 / 4; object-position: top; }
+.sobre__item:last-child img  { aspect-ratio: 4 / 5; }
+.sobre__item h3 { margin-top: 1rem; font-size: var(--fs-md); color: var(--site-ferrugem); }
+.sobre__item p { font-size: var(--fs-sm); }
+
+/* Valores */
+.valores { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.valor img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--raio-sm); }
+.valor h3 { margin-top: 1rem; font-size: var(--fs-base); }
+.valor p { font-size: var(--fs-sm); }
+.valor--rotulo img { object-position: center 25%; }
+
+.cta { text-align: center; padding-block: 2rem 0; }
+
+@media (max-width: 760px) {
+  .sobre, .valores { grid-template-columns: 1fr; }
+  .sobre__item:first-child img { aspect-ratio: 4 / 3; object-position: center 20%; }
+}
